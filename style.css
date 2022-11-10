@@ -3,6 +3,12 @@ div {
     border: solid 3px tomato;
 }
 
-#greenOrganic {
+.bins {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bin {
     width: 500px;
 }
