@@ -14,7 +14,7 @@ function drop(event) {
   event.preventDefault();
   var data = event.dataTransfer.getData("target");
   event.target.appendChild(document.getElementById(data));
-  getScore();
+  updateScore();
 }
 
 // score logic
@@ -22,5 +22,10 @@ var score = 0;
 
 function getScore() {
   document.getElementById("score").innerHTML = score;
+}
+
+function updateScore() {
+  score = score + 1;
+  getScore();
 }
 
