@@ -14,34 +14,46 @@
     <div class="bins">
       <div
         class="bin"
-        id="greenOrganic"
         ondrop="drop(event)"
         ondragover="allowDrop(event)"
       >
-        <img src="./assets/greenOrganic.svg" />
+        <img src="./assets/greenOrganic.svg"
+             id="greenOrganic"
+        />
       </div>
 
       <div
         class="bin"
-        id="blueRecycling"
         ondrop="drop(event)"
         ondragover="allowDrop(event)"
       >
-        <img src="./assets/blueRecycling.svg" />
+        <img src="./assets/blueRecycling.svg"
+             id="blueRecycling"
+        />
       </div>
 
       <div
       class="bin"
-      id="redLandfill"
       ondrop="drop(event)"
       ondragover="allowDrop(event)"
     >
-      <img src="./assets/redLandfill.svg" />
+      <img src="./assets/redLandfill.svg"
+           id="redLandfill"
+      />
     </div>
     </div>
 
     <img
       id="trash"
+      src="./assets/trash.png"
+      draggable="true"
+      ondragstart="drag(event)"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+    />
+
+    <img
+      id="trash2"
       src="./assets/trash.png"
       draggable="true"
       ondragstart="drag(event)"

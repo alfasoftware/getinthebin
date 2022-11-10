@@ -5,16 +5,22 @@ function allowDrop(event) {
 
 function drag(event) {
   console.log("drag event");
-  event.dataTransfer.setData("target", event.target.id);
+  event.dataTransfer.setData("draggedElement", event.target.id);
+  event.dataTransfer.setData("trashType", "organic")
 }
 
 function drop(event) {
   console.log("drop event");
-  console.log(event.target);
   event.preventDefault();
-  var data = event.dataTransfer.getData("target");
-  event.target.appendChild(document.getElementById(data));
-  updateScore();
+  var draggedElementId = event.dataTransfer.getData("draggedElement");
+  var trashType =  event.dataTransfer.getData("trashType");
+  event.target.appendChild(document.getElementById(draggedElementId));
+  if (trashType === "organic" && document.getElementById("greenOrganic").id === "greenOrganic") {
+    console.log("THIS IS ORGANIC");
+    updateScore();
+  } else {
+    console.log("THIS IS NOT ORGANIC");
+  }
 }
 
 // score logic
