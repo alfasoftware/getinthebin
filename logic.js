@@ -35,6 +35,10 @@ function drop(event) {
     decrementScore();
     return;
   }
+  if (trashType !== "organic" && event.target.id === "greenOrganic") {
+    decrementScore();
+    return;
+  }
 
   console.log("Bad guess");
 }
@@ -63,5 +67,8 @@ const trashItems = new Map([
   ["chopsticks", "landfill"],
   ["plasticBottle", "recycling"],
   ["appleCore", "organic"],
-
+  ["teabag", "organic"],
+  ["cardboard", "recycling"],
+  ["sandwich", "organic"],
+  ["takeawayCup", "landfill"],
 ]);
