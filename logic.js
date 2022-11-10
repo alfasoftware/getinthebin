@@ -31,7 +31,7 @@ function drop(event) {
     incrementScore();
     return;
   }
-  if ((trashType === "organic" || trashType === "landfill") && event.target.id === "blueRecycling") {
+  if (trashType !== "recycling" && event.target.id === "blueRecycling") {
     decrementScore();
     return;
   }
