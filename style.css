@@ -3,6 +3,17 @@ div {
     border: solid 3px tomato;
 }
 
+.gameName {
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.score {
+    text-align: end;
+    font-size: 100px;
+}
+
 .bins {
     display: flex;
     align-items: center;

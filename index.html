@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="style.css" />
     <script src="logic.js"></script>
   </head>
-  <body>
-    <h1>Get in the Bin</h1>
+  <body onload="getScore()">
+    <h1 class="gameName">Get in the Bin</h1>
+
+    <div class="score"> Score: <span id="score"></span></div>
 
     <div class="bins">
       <div
@@ -16,7 +18,7 @@
         ondrop="drop(event)"
         ondragover="allowDrop(event)"
       >
-        <img src="./assets/bin.svg" />
+        <img src="./assets/greenOrganic.svg" />
       </div>
 
       <div
@@ -25,7 +27,7 @@
         ondrop="drop(event)"
         ondragover="allowDrop(event)"
       >
-        <img src="./assets/bin.svg" />
+        <img src="./assets/blueRecycling.svg" />
       </div>
 
       <div
@@ -34,7 +36,7 @@
       ondrop="drop(event)"
       ondragover="allowDrop(event)"
     >
-      <img src="./assets/bin.svg" />
+      <img src="./assets/redLandfill.svg" />
     </div>
     </div>
 
