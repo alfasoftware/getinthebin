@@ -7,7 +7,6 @@ function drag(event) {
   console.log("drag event");
   event.dataTransfer.setData("draggedElement", event.target.id);
   event.dataTransfer.setData("trashType", trashItems.get(event.target.id));
-  console.log(trashItems.get(event.target.id));
 }
 
 function drop(event) {
@@ -17,31 +16,37 @@ function drop(event) {
   var trashType = event.dataTransfer.getData("trashType");
   event.target.appendChild(document.getElementById(draggedElementId));
   if (trashType === "organic" && event.target.id === "greenOrganic") {
-    console.log("CORRECT - THIS IS ORGANIC");
     incrementScore();
     return;
   }
   if (trashType === "recycling" && event.target.id === "blueRecycling") {
-    console.log("CORRECT - THIS IS RECYCLNG");
     incrementScore();
     return;
   }
   if (trashType === "landfill" && event.target.id === "redLandfill") {
-    console.log("CORRECT - THIS IS LANDFILL");
     incrementScore();
     return;
   }
   if (trashType !== "recycling" && event.target.id === "blueRecycling") {
     decrementScore();
+    shakeBin();
     return;
   }
   if (trashType !== "organic" && event.target.id === "greenOrganic") {
     decrementScore();
-    return;
+    shakeBin();
   }
-
-  console.log("Bad guess");
 }
+
+// Shake logic
+function shakeBin() {
+  var binToShake =  event.target.id;
+  document.getElementById(binToShake).className="shake";
+  setTimeout(function() {
+    document.getElementById(binToShake).className="";
+  }, 820);
+}
+
 
 // score logic
 var score = 0;
@@ -58,7 +63,7 @@ function incrementScore() {
 function decrementScore() {
     score = score - 1;
     getScore();
-  }
+}
 
 // trash map
 const trashItems = new Map([
