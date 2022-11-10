@@ -50,4 +50,5 @@ function updateScore() {
 const trashItems = new Map([
   ["bananaPeel", "organic"],
   ["aluminiumTin", "recycling"],
+  ["chopsticks", "landfill"],
 ]);
