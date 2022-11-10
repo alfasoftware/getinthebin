@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get in the Bin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+</head>
+<body>
+
+    <h1>Get in the Bin</h1>
+
+    <div id="greenOrganic"
+         ondrop="drop(event)"
+         ondragover="allowDrop(event)">
+    </div>
+
+    <div id="blueRecycling"
+         ondrop="poison(event)"
+         ondragover="allowDrop(event)">
+    </div>
+
+    <div id="redLandfill"
+        ondrop="poison(event)"
+        ondragover="allowDrop(event)">
+    </div>
+
+
+    <img id="trash"
+         src=""
+         draggable="true"
+         ondragstart="drag(event)"
+         ondrop="drop(event)"
+         ondragover="allowDrop(event)"
+    >
+
+</body>
+</html>
