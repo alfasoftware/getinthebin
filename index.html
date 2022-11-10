@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Get in the Bin</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <script src="logic.js"></script>
-  </head>
-  <body onload="getScore()">
-    <h1 class="gameName">Get in the Bin</h1>
+</head>
+<body onload="getScore()">
+<h1 class="gameName">Get in the Bin</h1>
 
-    <div class="score">Score: <span id="score"></span></div>
+<div class="score">Score: <span id="score"></span></div>
 
-    <div class="bins">
-      <div class="bin">
+<div class="bins">
+    <div class="bin">
         <img
           src="./assets/greenOrganic.svg"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
           id="greenOrganic"
         />
-      </div>
+    </div>
 
-      <div class="bin">
+    <div class="bin">
         <img
           src="./assets/blueRecycling.svg"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
           id="blueRecycling"
         />
-      </div>
+    </div>
 
-      <div class="bin">
+    <div class="bin">
         <img
           src="./assets/redLandfill.svg"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
           id="redLandfill"
         />
-      </div>
     </div>
+</div>
 
-    <div class="trashBox">
-      <div class="trashItem">
+<div class="trashBox">
+    <div class="trashItem">
         <img
           id="bananaPeel"
           src="./assets/bananaPeel.svg"
@@ -50,8 +50,8 @@
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         />
-      </div>
-      <div class="trashItem">
+    </div>
+    <div class="trashItem">
         <img
           id="aluminiumTin"
           src="./assets/aluminiumTin.svg"
@@ -60,7 +60,17 @@
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         />
-      </div>
     </div>
-  </body>
+    <div class="trashItem">
+        <img
+          id="chopsticks"
+          src="./assets/chopsticks.svg"
+          draggable="true"
+          ondragstart="drag(event)"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        />
+    </div>
+</div>
+</body>
 </html>
