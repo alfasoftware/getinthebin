@@ -3,6 +3,10 @@
     /* border: solid 3px tomato; */
 /* } */
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .gameName {
     text-align: center;
     font-size: 50px;
@@ -11,7 +15,8 @@
 
 .score {
     text-align: end;
-    font-size: 100px;
+    font-size: 2em;
+    padding-right: 10%;
 }
 
 .bins {
