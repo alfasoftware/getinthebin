@@ -9,38 +9,35 @@
   <body onload="getScore()">
     <h1 class="gameName">Get in the Bin</h1>
 
-    <div class="score"> Score: <span id="score"></span></div>
+    <div class="score">Score: <span id="score"></span></div>
 
     <div class="bins">
-      <div
-        class="bin"
-        ondrop="drop(event)"
-        ondragover="allowDrop(event)"
-      >
-        <img src="./assets/greenOrganic.svg"
-             id="greenOrganic"
+      <div class="bin">
+        <img
+          src="./assets/greenOrganic.svg"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+          id="greenOrganic"
         />
       </div>
 
-      <div
-        class="bin"
-        ondrop="drop(event)"
-        ondragover="allowDrop(event)"
-      >
-        <img src="./assets/blueRecycling.svg"
-             id="blueRecycling"
+      <div class="bin">
+        <img
+          src="./assets/blueRecycling.svg"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+          id="blueRecycling"
         />
       </div>
 
-      <div
-      class="bin"
-      ondrop="drop(event)"
-      ondragover="allowDrop(event)"
-    >
-      <img src="./assets/redLandfill.svg"
-           id="redLandfill"
-      />
-    </div>
+      <div class="bin">
+        <img
+          src="./assets/redLandfill.svg"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+          id="redLandfill"
+        />
+      </div>
     </div>
 
     <img

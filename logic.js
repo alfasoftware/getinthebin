@@ -15,7 +15,7 @@ function drop(event) {
   var draggedElementId = event.dataTransfer.getData("draggedElement");
   var trashType =  event.dataTransfer.getData("trashType");
   event.target.appendChild(document.getElementById(draggedElementId));
-  if (trashType === "organic" && document.getElementById("greenOrganic").id === "greenOrganic") {
+  if (trashType === "organic" && event.target.id === "greenOrganic") {
     console.log("THIS IS ORGANIC");
     updateScore();
   } else {
