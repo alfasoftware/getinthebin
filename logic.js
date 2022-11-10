@@ -6,21 +6,32 @@ function allowDrop(event) {
 function drag(event) {
   console.log("drag event");
   event.dataTransfer.setData("draggedElement", event.target.id);
-  event.dataTransfer.setData("trashType", "organic")
+  event.dataTransfer.setData("trashType", trashItems.get(event.target.id));
+  console.log(trashItems.get(event.target.id));
 }
 
 function drop(event) {
   console.log("drop event");
   event.preventDefault();
   var draggedElementId = event.dataTransfer.getData("draggedElement");
-  var trashType =  event.dataTransfer.getData("trashType");
+  var trashType = event.dataTransfer.getData("trashType");
   event.target.appendChild(document.getElementById(draggedElementId));
   if (trashType === "organic" && event.target.id === "greenOrganic") {
-    console.log("THIS IS ORGANIC");
+    console.log("CORRECT - THIS IS ORGANIC");
     updateScore();
-  } else {
-    console.log("THIS IS NOT ORGANIC");
+    return;
   }
+  if (trashType === "recycling" && event.target.id === "blueRecycling") {
+    console.log("CORRECT - THIS IS RECYCLNG");
+    updateScore();
+    return;
+  }
+  if (trashType === "landfill" && event.target.id === "redLandfill") {
+    console.log("CORRECT - THIS IS LANDFILL");
+    updateScore();
+    return;
+  }
+  console.log("Bad guess");
 }
 
 // score logic
@@ -35,3 +46,8 @@ function updateScore() {
   getScore();
 }
 
+// trash map
+const trashItems = new Map([
+  ["bananaPeel", "organic"],
+  ["aluminiumTin", "recycling"],
+]);

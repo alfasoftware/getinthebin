@@ -1,7 +1,7 @@
 
-div {
-    border: solid 3px tomato;
-}
+/* div { */
+    /* border: solid 3px tomato; */
+/* } */
 
 .gameName {
     text-align: center;
@@ -22,4 +22,15 @@ div {
 
 .bin {
     width: 500px;
+}
+
+.trashBox {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.trashItem {
+    width: 150px;
 }
