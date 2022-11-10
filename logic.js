@@ -76,4 +76,7 @@ const trashItems = new Map([
   ["cardboard", "recycling"],
   ["sandwich", "organic"],
   ["takeawayCup", "landfill"],
+  ["wetBottle", "landfill"],
+  ["dirtyBox", "landfill"],
+  ["paperTowel", "landfill"],
 ]);
