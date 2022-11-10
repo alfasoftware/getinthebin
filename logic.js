@@ -18,19 +18,24 @@ function drop(event) {
   event.target.appendChild(document.getElementById(draggedElementId));
   if (trashType === "organic" && event.target.id === "greenOrganic") {
     console.log("CORRECT - THIS IS ORGANIC");
-    updateScore();
+    incrementScore();
     return;
   }
   if (trashType === "recycling" && event.target.id === "blueRecycling") {
     console.log("CORRECT - THIS IS RECYCLNG");
-    updateScore();
+    incrementScore();
     return;
   }
   if (trashType === "landfill" && event.target.id === "redLandfill") {
     console.log("CORRECT - THIS IS LANDFILL");
-    updateScore();
+    incrementScore();
     return;
   }
+  if ((trashType === "organic" || trashType === "landfill") && event.target.id === "blueRecycling") {
+    decrementScore();
+    return;
+  }
+
   console.log("Bad guess");
 }
 
@@ -41,10 +46,15 @@ function getScore() {
   document.getElementById("score").innerHTML = score;
 }
 
-function updateScore() {
+function incrementScore() {
   score = score + 1;
   getScore();
 }
+
+function decrementScore() {
+    score = score - 1;
+    getScore();
+  }
 
 // trash map
 const trashItems = new Map([
